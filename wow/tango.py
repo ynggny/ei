@@ -31,8 +31,8 @@ def choiceng():##ランダムに英単語を抽出
 def addjap():##対応する日本語訳を追加
     ull =[]
     eigo1=[]
-    eigo = choiceng()
-    engliq = oono0()
+    eigo = oono0()
+    engliq = choiceng()
     japo = oono()
     for d in range(len(eigo)):
         che = eigo[d]
