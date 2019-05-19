@@ -8,7 +8,7 @@ def mark():##ドットを追加
 
 def oono0 ():##日本語
     voc = []
-    with open ('/home/nagashima/ei/wow/japanese.csv','r') as e :
+    with open ('japanese.csv','r') as e :
         csvv = csv.reader(e)
         for o in csvv :
             voc.append(o)
@@ -16,7 +16,7 @@ def oono0 ():##日本語
     pass
 def oono ():##英語
     ass = []
-    with open ('/home/nagashima/ei/wow/chinko.csv','r') as f :
+    with open ('chinko.csv','r') as f :
         a = csv.reader(f)
         for i in a :
             ass.append(i)
@@ -24,25 +24,25 @@ def oono ():##英語
 def choiceng():##ランダムに英単語を抽出
     jcon = []
     engg =[]
-    engli = oono()
+    engli = oono0()
     japo = oono()
-    eng = random.sample(engli,37)
+    eng = random.sample(engli,20)
     return eng
 def addjap():##対応する日本語訳を追加
     ull =[]
     eigo1=[]
     eigo = oono0()
-    engliq = oono()
-    japo = choiceng()
-    for d in range(len(japo)):
-        che = japo[d]
+    engliq = choiceng()
+    japo = oono()
+    for d in range(len(eigo)):
+        che = eigo[d]
         sar = engliq.index(che)
-        jap = eigo[sar]
-        yyc = japo[d] + list("     ⓪①")
-        are = jap + list("")
+        jap = japo[sar]
+        yyc = japo[sar] + list("")
+        are = eigo[d] + list("     ⓪①")
         eigo1.append(are)
         ull.append(yyc)
-    return ull , eigo1
+    return eigo1 , ull
 
 ##整形してリストに追加
 def fusion():
