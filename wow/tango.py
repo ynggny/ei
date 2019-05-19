@@ -26,7 +26,7 @@ def choiceng():##ランダムに英単語を抽出
     engg =[]
     engli = oono0()
     japo = oono()
-    eng = random.sample(engli,20)
+    eng = random.sample(engli,37)
     return eng
 def addjap():##対応する日本語訳を追加
     ull =[]
