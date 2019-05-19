@@ -34,12 +34,12 @@ def addjap():##対応する日本語訳を追加
     eigo = oono0()
     engliq = choiceng()
     japo = oono()
-    for d in range(len(eigo)):
-        che = eigo[d]
-        sar = engliq.index(che)
-        jap = japo[sar]
-        yyc = japo[sar] + list("")
-        are = eigo[d] + list("     ⓪①")
+    for d in range(len(engliq)):
+        che = engliq[d]
+        sar = japo.index(che)
+        jap = eigo[sar]
+        yyc = jap + list("")
+        are = che + list("     ⓪①")
         eigo1.append(are)
         ull.append(yyc)
     return eigo1 , ull
