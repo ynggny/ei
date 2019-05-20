@@ -24,8 +24,8 @@ def oono ():##英語
 def choiceng():##ランダムに英単語を抽出
     jcon = []
     engg =[]
-    engli = oono0()
-    japo = oono()
+    engli = oono()
+    japo = oono0()
     eng = random.sample(engli,37)
     return eng
 def addjap():##対応する日本語訳を追加
@@ -42,16 +42,15 @@ def addjap():##対応する日本語訳を追加
         are = che + list("     ⓪①")
         eigo1.append(are)
         ull.append(yyc)
-    return eigo1 , ull
+    return eigo1 , ull ,engliq
 
 ##整形してリストに追加
 def fusion():
     levels = []
+    uuu = []
     er,re = mark()
-    ae = oono()
-    aw = oono0()
-    a,b = addjap()
-    c,d = addjap()
+    a,b,f = addjap()
+    c,d,g = addjap()
     levels.extend(list(er))
     levels.extend(a)
     levels.extend(list(re))
@@ -64,4 +63,7 @@ def fusion():
     levels.extend(list(er))
     levels.extend(d)
     levels.extend(list(re))
-    return levels
+    uuu.extend(f)
+    uuu.extend(g)
+
+    return levels ,uuu

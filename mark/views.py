@@ -14,5 +14,9 @@ def download(request):
     response = HttpResponse(content_type='text/csv;charset=utf_8_sig')
     response['Content-Disposition']='attachment; filename=shine.csv'
     writer=csv.writer(response)
-    writer.writerows(fusion())
+    a,b = fusion()
+    writer.writerows(a)
+    with open('else.csv','w') as f:
+        writer =csv.writer(f)
+        writer.writerows(b)
     return response
